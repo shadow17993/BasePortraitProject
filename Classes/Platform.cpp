@@ -45,8 +45,8 @@ bool Platform::init()
 
 	//Position this container at left,centre. Anchor point should also be (0.0f, 0.5f).
 	auto winSize = Director::getInstance()->getVisibleSize();
-	this->setPosition(Vec2(0.0f, winSize.height*0.3f));//add size of platform sprite
-	this->setAnchorPoint(Vec2(0.0f, 0.3f));
+	this->setPosition(Vec2(0.0f, 0.0f));//add size of platform sprite
+	this->setAnchorPoint(Vec2(0.0f, 0.0f));
 	this->scheduleUpdate();
 
 	//sprites 
@@ -55,9 +55,9 @@ bool Platform::init()
 	platform3 = (Sprite*)rootNode->getChildByName("Platform3");
 
 	//starting position
-	startPosition_left = Vec2(platform1->getBoundingBox().size.width / 2, -winSize.height * 0.33); //sets Y position to the minus of 1/3 of the screen height
-	startPosition_middle = Vec2(winSize.width / 2, -winSize.height * 0.99); //sets Y position to the minus of the screen height
-	startPosition_right = Vec2(winSize.width - (platform3->getBoundingBox().size.width / 2), -winSize.height * 0.66);//sets Y position to 2/3 of the screen height
+	startPosition_left = Vec2(platform1->getBoundingBox().size.width / 2, winSize.height * 0.33); //sets Y position to the minus of 1/3 of the screen height
+	startPosition_middle = Vec2(winSize.width / 2, winSize.height * 0.99); //sets Y position to the minus of the screen height
+	startPosition_right = Vec2(winSize.width - (platform3->getBoundingBox().size.width / 2), winSize.height * 0.66);//sets Y position to 2/3 of the screen height
 	
 	//Set platform speed
 	platformSpeed = 3.0f;

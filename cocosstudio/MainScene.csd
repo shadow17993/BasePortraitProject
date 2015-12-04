@@ -48,6 +48,16 @@
             <PrePosition X="0.4131" Y="0.9176" />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
+          <AbstractNodeData Name="Platforms" ActionTag="-250261778" Tag="19" IconVisible="True" LeftMargin="0.0002" RightMargin="639.9998" TopMargin="962.9964" BottomMargin="-2.9964" InnerActionSpeed="1.0000" ctype="ProjectNodeObjectData">
+            <Size X="0.0000" Y="0.0000" />
+            <AnchorPoint />
+            <Position X="0.0002" Y="-2.9964" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.0000" Y="-0.0031" />
+            <PreSize X="0.0000" Y="0.0000" />
+            <FileData Type="Normal" Path="Platforms.csd" Plist="" />
+          </AbstractNodeData>
           <AbstractNodeData Name="startButton" ActionTag="2104918443" Tag="4" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="297.5518" RightMargin="296.4482" TopMargin="484.1760" BottomMargin="439.8240" TouchEnable="True" FontSize="14" ButtonText="Start" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -62,16 +72,6 @@
             <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Platforms" ActionTag="-250261778" Tag="19" IconVisible="True" RightMargin="640.0000" TopMargin="960.0000" InnerActionSpeed="1.0000" ctype="ProjectNodeObjectData">
-            <Size X="0.0000" Y="0.0000" />
-            <AnchorPoint />
-            <Position />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition />
-            <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Normal" Path="Platforms.csd" Plist="" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

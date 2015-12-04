@@ -52,6 +52,7 @@ bool HelloWorld::init()
 
 	platforms = (Platform*)rootNode->getChildByName("Platforms");
 	platforms = Platform::create();
+	this->addChild(platforms);
 
 	platform1 = (Sprite*)rootNode->getChildByName("Platform1");
 	platform2 = (Sprite*)rootNode->getChildByName("Platform2");
@@ -113,58 +114,58 @@ void HelloWorld::update(float delta)
 		//			   PLATFORM MOVEMENT			//
 		//------------------------------------------//
 
-		platform1->setPosition(platform1->getPosition().x, platform1->getPosition().y + platformSpeed);
-		if (platform1->getPosition().y >= winSize.height + 10)
-		{
-			platform1->setPosition(rand_0_1() * winSize.width, -10);
-			//platform1->setRotation(rand_0_1() * 90);
-			while (platform1->getPosition().x > winSize.width - (platform1->getBoundingBox().size.width / 2)
-				|| platform1->getPosition().x < platform1->getBoundingBox().size.width / 2)
-			{
-				platform1->setPosition(rand_0_1() * winSize.width, -10);
-				//platform1->setRotation(rand_minus1_1() * 90);
-			}
-			
-		}
+		//platform1->setPosition(platform1->getPosition().x, platform1->getPosition().y + platformSpeed);
+		//if (platform1->getPosition().y >= winSize.height + 10)
+		//{
+		//	platform1->setPosition(rand_0_1() * winSize.width, -10);
+		//	//platform1->setRotation(rand_0_1() * 90);
+		//	while (platform1->getPosition().x > winSize.width - (platform1->getBoundingBox().size.width / 2)
+		//		|| platform1->getPosition().x < platform1->getBoundingBox().size.width / 2)
+		//	{
+		//		platform1->setPosition(rand_0_1() * winSize.width, -10);
+		//		//platform1->setRotation(rand_minus1_1() * 90);
+		//	}
+		//	
+		//}
 
-		platform2->setPosition(platform2->getPosition().x, platform2->getPosition().y + platformSpeed);
-		if (platform2->getPosition().y >= winSize.height + 10)
-		{
-			platform2->setPosition(rand_0_1() * winSize.width, -10);
-			while (platform2->getPosition().x > winSize.width - (platform2->getBoundingBox().size.width / 2)
-				|| platform2->getPosition().x < platform2->getBoundingBox().size.width / 2)
-			{
-				platform2->setPosition(rand_0_1() * winSize.width, -10);
-				//platform2->setRotation(rand_minus1_1() * 90);
-			}
+		//platform2->setPosition(platform2->getPosition().x, platform2->getPosition().y + platformSpeed);
+		//if (platform2->getPosition().y >= winSize.height + 10)
+		//{
+		//	platform2->setPosition(rand_0_1() * winSize.width, -10);
+		//	while (platform2->getPosition().x > winSize.width - (platform2->getBoundingBox().size.width / 2)
+		//		|| platform2->getPosition().x < platform2->getBoundingBox().size.width / 2)
+		//	{
+		//		platform2->setPosition(rand_0_1() * winSize.width, -10);
+		//		//platform2->setRotation(rand_minus1_1() * 90);
+		//	}
 
-		}
+		//}
 
-		platform3->setPosition(platform3->getPosition().x, platform3->getPosition().y + platformSpeed);
-		if (platform3->getPosition().y >= winSize.height + 10)
-		{
-			platform3->setPosition(rand_0_1() * winSize.width, -10);
-			while (platform3->getPosition().x > winSize.width - (platform3->getBoundingBox().size.width / 2) 
-				|| platform3->getPosition().x < platform3->getBoundingBox().size.width / 2)
-			{
-				platform3->setPosition(rand_0_1() * winSize.width, -10);
-				//platform3->setRotation(rand_minus1_1() * 90);
-			}
-		}
+		//platform3->setPosition(platform3->getPosition().x, platform3->getPosition().y + platformSpeed);
+		//if (platform3->getPosition().y >= winSize.height + 10)
+		//{
+		//	platform3->setPosition(rand_0_1() * winSize.width, -10);
+		//	while (platform3->getPosition().x > winSize.width - (platform3->getBoundingBox().size.width / 2) 
+		//		|| platform3->getPosition().x < platform3->getBoundingBox().size.width / 2)
+		//	{
+		//		platform3->setPosition(rand_0_1() * winSize.width, -10);
+		//		//platform3->setRotation(rand_minus1_1() * 90);
+		//	}
+		//}
 
 		//------------------------------------------//
 		//			   PLATFORM COLLISION			//
 		//------------------------------------------//
 
-		/*if (platforms->Collision(ball))
-		{
-			this->EndGame();
-		}*/
-
-		if (platformCollision(ball, platform1) || platformCollision(ball, platform2) || platformCollision(ball, platform3))
+		if (platforms->Collision(ball->getBoundingBox()))
 		{
 			this->EndGame();
 		}
+
+		/*if (platformCollision(ball, platform1) || platformCollision(ball, platform2) || platformCollision(ball, platform3))
+		{
+			this->EndGame();
+		}*/
 
 		timercount++;
 		if (timercount >= 60)
@@ -229,10 +230,10 @@ void HelloWorld::StartGame()
 	// Reset the score.
 	GameManager::sharedGameManager()->ResetScore();
 
-	//platforms->startGame();
+	platforms->startPos();
 
 	// Reset the Platforms
-	platform1->setPosition(
+	/*platform1->setPosition(
 		(winSize.width * 0.33) - (platform1->getBoundingBox().size.width / 2), 
 		 -winSize.height - 10);
 
@@ -242,7 +243,7 @@ void HelloWorld::StartGame()
 
 	platform3->setPosition(
 		(winSize.width * 0.99) - (platform3->getBoundingBox().size.width / 2),
-		-winSize.height * 0.66);
+		-winSize.height * 0.66);*/
 
 	timer = 0;
 	timercount = 0;

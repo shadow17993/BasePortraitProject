@@ -1,5 +1,5 @@
 <GameProjectFile>
-  <PropertyGroup Type="Node" Name="Platform_1" ID="a715a6f4-b424-4a98-965d-6075535778a5" Version="2.3.2.3" />
+  <PropertyGroup Type="Node" Name="Platforms" ID="a715a6f4-b424-4a98-965d-6075535778a5" Version="2.3.2.3" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
