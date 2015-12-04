@@ -9,7 +9,7 @@ USING_NS_CC;
 
 using namespace std;
 using namespace cocostudio::timeline;
-
+// This is a test comment
 Scene* HelloWorld::createScene()
 {
     // 'scene' is an autorelease object
