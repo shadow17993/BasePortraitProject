@@ -51,7 +51,6 @@ private:
 	Sprite* background1;
 	Sprite* background2;
 	Platform* platforms;
-	//int timer;
 	float platformSpeed;
 	int speedcount;
 	Vec2 touchLocation;

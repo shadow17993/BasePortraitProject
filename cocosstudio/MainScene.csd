@@ -1,30 +1,30 @@
-<GameProjectFile>
-  <PropertyGroup Type="Scene" Name="MainScene" ID="a2ee0952-26b5-49ae-8bf9-4f1d6279b798" Version="2.3.2.3" />
+<GameFile>
+  <PropertyGroup Name="MainScene" Type="Scene" ID="a2ee0952-26b5-49ae-8bf9-4f1d6279b798" Version="2.3.3.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Scene" ctype="GameNodeObjectData">
         <Size X="640.0000" Y="960.0000" />
         <Children>
-          <AbstractNodeData Name="background" ActionTag="1086176749" Tag="3" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-191.8048" RightMargin="-192.1952" TopMargin="-295.9736" BottomMargin="-280.0264" ctype="SpriteObjectData">
+          <AbstractNodeData Name="background" ActionTag="1086176749" Tag="3" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-191.8080" RightMargin="-192.1920" TopMargin="-295.9680" BottomMargin="-280.0320" ctype="SpriteObjectData">
             <Size X="1024.0000" Y="1536.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="320.1920" Y="487.9680" />
             <Scale ScaleX="0.6286" ScaleY="0.6380" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5003" Y="0.5083" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="1.6000" Y="1.6000" />
             <FileData Type="Normal" Path="Stars.jpg" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="background2" ActionTag="-1515651814" Tag="28" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-190.8041" RightMargin="-193.1959" TopMargin="-292.9739" BottomMargin="-283.0262" ctype="SpriteObjectData">
+          <AbstractNodeData Name="background2" ActionTag="-1515651814" Tag="28" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-190.7840" RightMargin="-193.2160" TopMargin="-292.9921" BottomMargin="-283.0080" ctype="SpriteObjectData">
             <Size X="1024.0000" Y="1536.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="321.2160" Y="484.9920" />
             <Scale ScaleX="0.6286" ScaleY="0.6380" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5019" Y="0.5052" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="1.6000" Y="1.6000" />
             <FileData Type="Normal" Path="Stars.jpg" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
@@ -35,7 +35,7 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5002" Y="0.6202" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.0781" Y="0.0521" />
             <FileData Type="Normal" Path="Ball.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
@@ -46,9 +46,9 @@
             <Scale ScaleX="4.5049" ScaleY="3.5572" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4131" Y="0.9176" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PreSize X="0.1563" Y="0.0281" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Platforms" ActionTag="-250261778" Tag="19" IconVisible="True" LeftMargin="0.0002" RightMargin="639.9998" TopMargin="962.9964" BottomMargin="-2.9964" InnerActionSpeed="1.0000" ctype="ProjectNodeObjectData">
+          <AbstractNodeData Name="Platforms" ActionTag="-250261778" Tag="19" IconVisible="True" LeftMargin="0.0002" RightMargin="639.9998" TopMargin="962.9964" BottomMargin="-2.9964" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
             <Position X="0.0002" Y="-2.9964" />
@@ -58,7 +58,7 @@
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Platforms.csd" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="startButton" ActionTag="2104918443" Tag="4" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="297.5518" RightMargin="296.4482" TopMargin="484.1760" BottomMargin="439.8240" TouchEnable="True" FontSize="14" ButtonText="Start" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="startButton" ActionTag="2104918443" Tag="4" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="297.5760" RightMargin="296.4240" TopMargin="484.1760" BottomMargin="439.8240" TouchEnable="True" FontSize="14" ButtonText="Start" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="320.5760" Y="457.8240" />
@@ -77,4 +77,4 @@
       </ObjectData>
     </Content>
   </Content>
-</GameProjectFile>
+</GameFile>

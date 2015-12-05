@@ -19,6 +19,8 @@ class Platform : public Node
 		void startPos();
 		bool Collision(Rect colliderBox);
 
+		float	platformSpeed;
+
 private:
 	
 	//Platform Sprites
@@ -30,6 +32,6 @@ private:
 	Vec2 startPosition_middle;
 	Vec2 startPosition_left;
 
-	float	platformSpeed;
+	
 };
 
