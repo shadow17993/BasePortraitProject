@@ -54,10 +54,6 @@ bool Platform::init()
 	platform2 = (Sprite*)rootNode->getChildByName("Platform2");
 	platform3 = (Sprite*)rootNode->getChildByName("Platform3");
 
-	platform1->setScale(winSize.width * 0.00109, winSize.height * 0.00438);
-	platform2->setScale(winSize.width * 0.00109, winSize.height * 0.00438);
-	platform3->setScale(winSize.width * 0.00109, winSize.height * 0.00438);
-
 	//starting position
 	startPosition_left = Vec2(platform1->getBoundingBox().size.width / 2, -winSize.height * 0.33); //sets Y position to the minus of 1/3 of the screen height
 	startPosition_middle = Vec2(winSize.width / 2, -winSize.height * 0.99); //sets Y position to the minus of the screen height
