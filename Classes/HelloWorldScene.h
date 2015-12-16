@@ -36,8 +36,6 @@ public:
 	void StartGame();
 	void EndGame();
 
-	bool platformCollision(Sprite* ball, Sprite* platform);
-
 	int timer = 0;
 	int timercount = 0;
 
@@ -54,6 +52,7 @@ private:
 	float platformSpeed;
 	int speedcount;
 	Vec2 touchLocation;
+	Label* instruct;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

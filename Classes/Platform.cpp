@@ -137,11 +137,11 @@ void Platform::reset(Sprite* platform)
 	platform->setPosition(rand_0_1() * winSize.width, -10);
 }
 
-bool Platform::Collision(Rect colliderBox)
+bool Platform::Collision(Sprite* ball)
 {
-	if (platform1->getBoundingBox().intersectsRect(colliderBox)
-		|| platform2->getBoundingBox().intersectsRect(colliderBox)
-		|| platform3->getBoundingBox().intersectsRect(colliderBox))
+	if (platform1->getBoundingBox().intersectsCircle(ball->getPosition(), ball->getBoundingBox().size.height / 2)
+		|| platform2->getBoundingBox().intersectsCircle(ball->getPosition(), ball->getBoundingBox().size.height / 2)
+		|| platform3->getBoundingBox().intersectsCircle(ball->getPosition(), ball->getBoundingBox().size.height / 2))
 	{
 		return true;
 	}

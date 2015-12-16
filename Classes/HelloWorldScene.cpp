@@ -53,7 +53,7 @@ bool HelloWorld::init()
 	platforms = Platform::create();
 	this->addChild(platforms);
 
-	
+	instruct = (Label*)rootNode->getChildByName("instructionText");
 
 	background1 = (Sprite*)rootNode->getChildByName("background");
 	background2 = (Sprite*)rootNode->getChildByName("background2");
@@ -73,7 +73,7 @@ bool HelloWorld::init()
 
 	startButton = static_cast<ui::Button*>(rootNode->getChildByName("startButton"));
 	startButton->addTouchEventListener(CC_CALLBACK_2(HelloWorld::startButtonPressed, this));
-	startButton->setPosition(Vec2(winSize.width*0.5f, winSize.height*0.5f));
+	startButton->setPosition(Vec2(winSize.width*0.5f, winSize.height*0.2f));
 
 	GameManager::sharedGameManager()->isGameLive = false;
 
@@ -87,7 +87,6 @@ void HelloWorld::update(float delta)
 	
 	if (GameManager::sharedGameManager()->isGameLive)
 	{
-
 		//------------------------------------------//
 		//				BALL MOVEMENT				//
 		//------------------------------------------//
@@ -106,19 +105,14 @@ void HelloWorld::update(float delta)
 			this->EndGame();
 		}
 
-
-		
-
 		//------------------------------------------//
 		//			   PLATFORM COLLISION			//
 		//------------------------------------------//
 
-		if (platforms->Collision(ball->getBoundingBox()))
+		if (platforms->Collision(ball))
 		{
 			this->EndGame();
 		}
-
-		
 
 		timercount++;
 		if (timercount >= 60)
@@ -183,8 +177,6 @@ void HelloWorld::StartGame()
 
 	platforms->startPos();
 
-	
-
 	timer = 0;
 	timercount = 0;
 	platforms->platformSpeed = 3.0;
@@ -194,8 +186,10 @@ void HelloWorld::StartGame()
 	background2->setPosition(-winSize.width / 2, -winSize.height / 2);
 
 	//Retract start button.
-	auto moveTo = MoveTo::create(0.5, Vec2(-winSize.width*0.5f, winSize.height*0.5f)); // Take half a second to move off screen.
+	auto moveTo = MoveTo::create(0.5, Vec2(-winSize.width*0.5f, winSize.height*0.2f)); // Take half a second to move off screen.
 	startButton->runAction(moveTo);
+	/*auto move = MoveTo::create(0.5, Vec2(-winSize.width*0.5f, winSize.height*0.5f));
+	instruct->runAction(move);*/
 }
 
 //-------------------------------------------------------------------------
@@ -213,7 +207,7 @@ void HelloWorld::EndGame()
 	GameManager::sharedGameManager()->isGameLive = false;
 
 	//Bring start button back on screen.
-	auto moveTo = MoveTo::create(0.5, Vec2(winSize.width*0.5f, winSize.height*0.5f)); // Take half a second to move on screen.
+	auto moveTo = MoveTo::create(0.5, Vec2(winSize.width*0.5f, winSize.height*0.2f)); // Take half a second to move on screen.
 	startButton->runAction(moveTo);
 }
 

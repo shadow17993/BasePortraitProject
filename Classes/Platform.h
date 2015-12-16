@@ -17,7 +17,7 @@ class Platform : public Node
 		void update(float deltaTime);
 		void reset(Sprite* platform);
 		void startPos();
-		bool Collision(Rect colliderBox);
+		bool Collision(Sprite* ball);
 
 		float	platformSpeed;
 

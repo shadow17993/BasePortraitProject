@@ -3,13 +3,14 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Project Name="MainScene.csd" Type="Scene" />
+        <Project Name="GameScene.csd" Type="Scene" />
         <Image Name="HelloWorld.png" />
         <Image Name="Platform.jpg" />
         <Image Name="Stars.jpg" />
         <Image Name="Ball.png" />
         <Image Name="Cloud.png" />
         <Project Name="Platforms.csd" Type="Node" />
+        <Project Name="StartScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>
